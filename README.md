@@ -11,8 +11,8 @@ Backend service for Money Master, a side project created by me (borja.tur@gmail)
 - [x] MongoDB with Mongoose
 - [x] Configured with Eslint and Jest out the box
 - [x] Easy to reason about folder structure
-- [-] Testing (WIP)
-- [-] Authentication/Authorization (WIP)
+- [ ] Testing (WIP)
+- [ ] Authentication/Authorization (WIP)
 
 ## Live Demo
 Visit https://money-master-api.borjatur.com/docs for a live demo of this project, you can also find the frontend application available at https://money-master.borjatur.com as a consumer of this API project
