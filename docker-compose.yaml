@@ -1,0 +1,15 @@
+services:
+  mongodb:
+    container_name: mongo
+    image: mongo:6
+    restart: always
+    ports:
+      - 27017:27017
+
+  moneymaster:
+    container_name: moneymaster
+    build: ./
+    depends_on:
+      - "mongodb"
+    ports:
+      - 5050:5050
