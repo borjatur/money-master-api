@@ -21,11 +21,14 @@ Those demo services are running on my own personal kubernetes cluster deployed i
 
 There is some demo data available that will be restored in a scheduled base.
 
+![demo gif](https://api.apify.com/v2/key-value-stores/VOER43I2UCXPHhEjk/records/money-master-api.borjatur.com-scroll_lossy-comp)
+
 ## Getting started
 
 * docker-compose up --force-recreate --build
 
 Or alternatively a mongodb instance running somewhere, update the connection url accordingly and:
 
+* npm install
 * npm run build && npm start
 * visit http://localhost:5050/docs and enjoy!
