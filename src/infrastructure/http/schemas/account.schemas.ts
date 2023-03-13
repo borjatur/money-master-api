@@ -18,7 +18,7 @@ const accountExamples: IAccount[] = [
   }
 ]
 
-const Account = Type.Object({
+const accountProperties = {
   id: Id,
   accountType: Type.Enum(AccounType),
   name: Type.String(),
@@ -27,12 +27,14 @@ const Account = Type.Object({
   currency: Type.Enum(Currency),
   createdAt: Type.String(),
   updatedAt: Type.String()
-}, {
+}
+
+const Account = Type.Object(accountProperties, {
   examples: [...accountExamples]
 })
 
 const Accounts = Type.Object({
-  accounts: Type.Array(Account)
+  accounts: Type.Array(Type.Object(accountProperties))
 }, {
   examples: [{
     accounts: [...accountExamples]
@@ -40,7 +42,7 @@ const Accounts = Type.Object({
 })
 
 const AccountPayload = Type.Omit(
-  Account,
+  Type.Object(accountProperties),
   ['id', 'updatedAt', 'createdAt'],
   {
     examples: [...accountExamples.map(({ id, createdAt, updatedAt, ...body }) => body)]

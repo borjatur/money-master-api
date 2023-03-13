@@ -37,7 +37,7 @@ const transactionExamples: ITransaction[] = [
   }
 ]
 
-const Transaction = Type.Object({
+const transactionProperties = {
   id: Id,
   type: Type.Enum(TransactionType),
   description: Type.String(),
@@ -49,13 +49,15 @@ const Transaction = Type.Object({
   createdAt: Type.String(),
   updatedAt: Type.String(),
   valuedAt: Type.String()
-}, {
+}
+
+const Transaction = Type.Object(transactionProperties, {
   examples: [...transactionExamples]
 })
 
 const Transactions = Type.Object({
   next: Type.Optional(Type.String()),
-  transactions: Type.Array(Transaction)
+  transactions: Type.Array(Type.Object(transactionProperties))
 }, {
   examples: [{
     next: '/transactions?next=6409f054fb61cfd1065a2519',
@@ -64,7 +66,7 @@ const Transactions = Type.Object({
 })
 
 const TransactionPayload = Type.Omit(
-  Transaction,
+  Type.Object(transactionProperties),
   ['id', 'createdAt', 'updatedAt'],
   {
     examples: [...transactionExamples.map(({ id, createdAt, updatedAt, ...body }) => body)]
