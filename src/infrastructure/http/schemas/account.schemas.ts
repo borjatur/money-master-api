@@ -7,7 +7,7 @@ import { Currency } from '@core/entities/currency'
 
 const accountExamples: IAccount[] = [
   {
-    id: '63cd0e4be59031edffa39f5c',
+    id: '640f6ac08ed7332e59a07627',
     accountType: AccounType.BANK,
     name: 'Evo Banco',
     iban: 'ES6702390806720039427026',

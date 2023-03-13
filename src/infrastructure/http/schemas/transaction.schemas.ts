@@ -7,28 +7,28 @@ import { Currency } from '@core/entities/currency'
 
 const transactionExamples: ITransaction[] = [
   {
-    id: '63f78784ee67add91808739a',
+    id: '640f6ae37f0aa115b71b1ca6',
     type: TransactionType.EXPENSE,
     description: 'groceries',
     tags: [
       'mercadona',
       'supermarket'
     ],
-    accountId: '63f78c8e4c8b943612ad33d9',
+    accountId: '640f6af054f0213c2d34866f',
     currency: Currency.EUR,
     amount: 48.4,
     valuedAt: '2023-02-23T00:00:00Z',
     createdAt: '2023-02-23T00:00:00Z',
     updatedAt: '2023-02-23T00:00:00Z'
   }, {
-    id: '63f78784ee67add91808739a',
+    id: '640f6af5d2f7c5073f87efa5',
     type: TransactionType.TRANSFER,
     description: 'debts and bills',
     tags: [
       'transfer'
     ],
-    accountId: '63f78c8e4c8b943612ad33d9',
-    destinationAccountId: '63f74c8e4c8b943512ad33d9',
+    accountId: '640f6b025c3b3a0ad40bf72e',
+    destinationAccountId: '640f6afac97d4447cb66990d',
     currency: Currency.EUR,
     amount: 48.4,
     valuedAt: '2023-02-23T00:00:00Z',
