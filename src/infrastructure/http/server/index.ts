@@ -7,7 +7,7 @@ import docs from '@infrastructure/http/plugins/docs'
 import config from '@infrastructure/http/plugins/config'
 import cors from '@fastify/cors'
 
-export const createServer = async (): Promise<FastifyInstance> => {
+export const createServer = async (environment: string): Promise<FastifyInstance> => {
   const envToLogger: any = {
     development: {
       transport: {
@@ -21,8 +21,6 @@ export const createServer = async (): Promise<FastifyInstance> => {
     production: true,
     test: false
   }
-
-  const environment = process.env.NODE_ENV ?? 'production'
 
   const serverOptions: FastifyServerOptions = {
     ajv: {

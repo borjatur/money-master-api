@@ -39,8 +39,8 @@ export class TransactionRepository implements ITransactionRepository {
     }
     if (filterCriteria?.start && filterCriteria?.end) {
       criteria.valuedAt = {
-        $get: filterCriteria?.start,
-        $lt: filterCriteria?.end
+        $gte: filterCriteria?.start,
+        $lte: filterCriteria?.end
       }
     }
     return await transactionDAO.find(criteria).sort({ _id: -1 }).limit(100)

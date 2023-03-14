@@ -1,4 +1,7 @@
-import { type RouteOptions, type RouteHandlerMethod } from 'fastify'
+import { 
+  type RouteOptions,
+  type RouteHandlerMethod
+} from 'fastify'
 import {
   createTransaction,
   getTransaction,
@@ -6,6 +9,9 @@ import {
   putTransaction,
   deleteTransaction
 } from '@infrastructure/http/controllers/transaction.ctrl'
+import {
+  browseTransactionsPreHandler
+} from '@infrastructure/http/hooks/transaction.hooks'
 import { type ITransactionRepository } from '@core/repositories/transaction.repo'
 import {
   postTransactionSchema,
@@ -32,6 +38,7 @@ export const transactionRoutes = (transactionRepository: ITransactionRepository)
     method: 'GET',
     url: '/transactions',
     schema: browseTransactionsSchema,
+    preHandler: browseTransactionsPreHandler as RouteHandlerMethod,
     handler: browseTransactions(transactionRepository) as RouteHandlerMethod
   },
   {

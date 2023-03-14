@@ -53,14 +53,6 @@ export const browseTransactions = (
   reply: FastifyReply
 ) {
   const { next, prev, start, end } = request.query
-  if (next && prev) {
-    // can not do this with Typebox schema
-    return await reply.status(400).send({
-      statusCode: 400,
-      error: 'Bad Request',
-      message: 'next and prev are mutually exclusive'
-    })
-  }
   const filterCriteria: ITransactionFilterCriteria = {}
   if (next) {
     filterCriteria.pagination = {
