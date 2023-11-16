@@ -15,15 +15,13 @@ Backend service for Money Master, a side project created by me (borja.tur@gmail)
 - [ ] Authentication/Authorization (WIP)
 
 ## Live Demo
-Visit https://money-master-api.borjatur.com/docs for a live demo of this project, you can also find the frontend application available at https://money-master.borjatur.com as a consumer of this API
+Visit https://money-master-api.borjatur.cloud/docs for a live demo of this project, you can also find the frontend application available at https://money-master.borjatur.cloud as a consumer of this API
 
 Demo services are running on my own personal kubernetes cluster deployed in:
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=e3a27deea2ac&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 There is some demo data available that will be restored in a scheduled base.
-
-![demo gif](https://api.apify.com/v2/key-value-stores/VOER43I2UCXPHhEjk/records/money-master-api.borjatur.com-scroll_lossy-comp)
 
 ## Getting started
 

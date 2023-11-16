@@ -21,7 +21,7 @@
     "hexagonal architecture"
   ],
   "author": "borja.tur@gmail.com",
-  "homepage": "https://money-master-api.borjatur.com/docs",
+  "homepage": "https://money-master-api.borjatur.cloud/docs",
   "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.6",
